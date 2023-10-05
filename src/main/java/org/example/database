@@ -1,0 +1,17 @@
+create database livraria;
+use livraria;
+
+create user <nome_usuario> identified by '12345';
+create database <nome-banco>;
+grand all on <nome-banco> to <nome-usuario>@localhost;
+use <nome-banco>
+
+create table livro(
+    id_livro integer not null,
+    titulo varchar(60) not null,
+    idioma varchar(20) not null,
+    autor varchar(45) not null,
+    classificacao varchar(45) not null,
+    resumo varchar(200),
+    constraint chave_primaria primary key (id_livro)
+);
